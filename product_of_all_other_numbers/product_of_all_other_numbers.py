@@ -3,9 +3,22 @@ Input: a List of integers
 Returns: a List of integers
 '''
 def product_of_all_other_numbers(arr):
-    # Your code here
+    #initialize empty array
+    products=[]
+    n = len(arr)
 
-    pass
+    #loop through array
+    for i in range(n):
+        prod = 1
+        for item in range(n):
+            #if i does not equal the item
+            if i != item:
+                #then prod equals prod multiplied by item
+                prod = prod * arr[item]
+        #append the prod to empty array
+        products.append(int(prod))
+
+    return products
 
 
 if __name__ == '__main__':
